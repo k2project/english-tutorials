@@ -1,55 +1,81 @@
 .paralex {
-    height: 80vh;
-    min-height: 50rem;
+    position: relative;
+    min-height: 55rem;
     overflow: hidden;
-}
-.paralex-img {
-    position: absolute;
-    height: 140vh;
-    min-height: calc(50rem + 40vh);
-    width: 100vw;
-    top: -20vh;
-    left: 0;
-    background-size: cover;
-    background-position: center top;
-}
-.filler {
-    padding: 15rem;
-    background-color: #fff;
-}
-.paralex-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(79, 91, 112, 1);
     display: grid;
     align-content: center;
     text-align: center;
     color: #fff;
-    padding: 0 15rem;
+    padding: 9rem 4rem 8rem;
+}
+.paralex-img {
+    position: absolute;
+    height: calc(100% + 40rem);
+    width: 100vw;
+    top: -20rem;
+    left: 0;
+    background-size: cover;
+    background-position: center top;
+    filter: grayscale(60%);
+    transform: translateZ(0); //for safari jittering on scroll
+}
+
+.paralex-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(79, 91, 112, 0.6);
 }
 .paralex-title {
-    font-size: 6rem;
-    // text-transform: uppercase;
+    font-size: 5rem;
+    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.2rem;
+    line-height: 1.1;
 }
 .paralex-subtitle {
     font-size: 2.7rem;
-    font-weight: 300;
-    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 1rem;
 }
+
 .top .paralex-img {
-    background-image: url('/imgs/bg1.jpg');
-    background-position: center bottom;
+    background-image: url('/imgs/top.jpg');
+    background-image: url('/imgs/business1.jpg');
+    background-position: right 10%;
+    filter: grayscale(40%);
+    top: -2.9rem;
 }
+
 .middle .paralex-img {
-    background-image: url('/imgs/bg2.jpg');
-    background-position: center bottom;
+    background-image: url('/imgs/medium.jpg');
+    background-image: url('/imgs/business3.jpg');
+    background-position: center;
 }
 .bottom .paralex-img {
-    background-image: url('/imgs/bg3.jpg');
-    background-position: center bottom;
+    background-image: url('/imgs/bottom.jpg');
+    background-position: center 10%;
+}
+
+.section-subtitle {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0 0 2rem;
+    line-height: 1.4;
+}
+
+@include mobile {
+    .paralex-title {
+        font-size: 4rem;
+    }
+    .paralex-subtitle {
+        font-size: 2.4rem;
+    }
+    .gamechanger {
+        font-size: 3rem;
+        font-weight: 700;
+    }
 }

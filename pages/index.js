@@ -1,48 +1,74 @@
 import Head from 'next/head';
 import { Fragment } from 'react';
 // import '../styles/styles.scss';
+import About from '../components/sections/About';
+import Work from '../components/sections/Work';
+import Projects from '../components/sections/Projects';
+import Contact from '../components/sections/Contact';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Section from '../components/Section';
 
 export default function Home() {
     return (
         <Fragment>
             <Head>
-                <title>Demo</title>
-                <link rel='icon' href='/favicon.ico' />
+                <title>
+                    Christopher Seabolt | Venture Capital Professional
+                </title>
+                <meta
+                    name='description'
+                    content='Christopher holds over 30 years of venture capital and operational experience in early-stage growth companies. Of almost 20 deals across multiple funds in the early-stage sector, consisting entirely of Seed and Start-up, Christopher has engineered successful (+money) exits for well over half of these, with extraordinarily high returns across all managed portfolios.'
+                />
+                <meta
+                    name='keywords'
+                    content='venture capital, early-stage, startup, seed, highest performance, experienced, realized returns'
+                />
+                <meta name='author' content='@_k2project' />
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0'
+                />
+                <meta
+                    property='og:title'
+                    content='Christopher Seabolt | Venture Capital Professional'
+                />
+                <meta property='og:url' content='https://www.armillary.eu' />
+                <meta property='og:type' content='website' />
+                <meta
+                    property='og:description'
+                    content='Christopher holds over 30 years of venture capital and operational experience in early-stage growth companies. Of almost 20 deals across multiple funds in the early-stage sector, consisting entirely of Seed and Start-up, Christopher has engineered successful (+money) exits for well over half of these, with extraordinarily high returns across all managed portfolios.'
+                />
+                <meta
+                    property='og:image'
+                    content='https://www.www.armillary.eu/imgs/christopher-seabolt.jpg'
+                />
+
+                <script
+                    async
+                    src='https://www.googletagmanager.com/gtag/js?id=UA-180574978-1'
+                ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0F90YHNWN0');
+        `,
+                    }}
+                />
+                <link rel='preconnect' href='https://fonts.gstatic.com' />
+                <link
+                    href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap'
+                    rel='stylesheet'
+                />
             </Head>
             <Header />
             <main>
-                <Section cls='top'>
-                    <h2 className='paralex-title'>Tutorials like no others</h2>
-                    <p className='paralex-subtitle'>
-                        Improve your English with native speaker that's easy to
-                        talk and skilled in tutoring.
-                    </p>
-                    <div className='btn-box'>
-                        <button className='btn btn--theme'>Take action</button>
-                    </div>
-                </Section>
-                <Section cls='middle'>
-                    <h2 className='paralex-title'>Listen. Talk. Succed.</h2>
-                    <p className='paralex-subtitle'>
-                        You can say whatever you want here. <br />
-                        Just sell it! And sell it well!
-                    </p>
-                    {/* <div className='btn-box'>
-                        <button className='btn btn--theme'>Other Action</button>
-                    </div> */}
-                </Section>
-                <Section cls='bottom'>
-                    <h2 className='paralex-title'>Don't miss out!</h2>
-                    <p className='paralex-subtitle'>
-                        Get in touch for free demo tutorial.
-                    </p>
-                    <div className='btn-box'>
-                        <button className='btn btn--theme'>Take action</button>
-                    </div>
-                </Section>
+                <About />
+                <Work />
+                <Projects />
+                <Contact />
             </main>
             <Footer />
         </Fragment>

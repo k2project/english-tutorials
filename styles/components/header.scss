@@ -1,0 +1,101 @@
+.logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    span {
+        font-weight: 600;
+    }
+}
+
+header {
+    padding: 4rem 5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+
+    nav {
+        flex-grow: 1;
+        text-align: right;
+        padding: 0.7rem 0 0.2rem;
+    }
+    li {
+        display: inline-block;
+        padding: 0 1.2rem;
+    }
+    a {
+        font-size: 1.6rem;
+    }
+    b {
+        font-size: 1.8rem;
+    }
+}
+.menu {
+    display: none;
+}
+.menu-close {
+    display: none;
+}
+@include tablet {
+    header {
+        padding: 4rem 3rem 3rem;
+    }
+}
+@include mobile {
+    header {
+        padding: 3rem 2rem;
+        display: flex;
+    }
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    .menu span {
+        display: block;
+        width: 3.5rem;
+        height: 0.4rem;
+        border-radius: 0.5rem;
+        margin: 0.6rem 0;
+        background-color: $COLOR_THEME;
+    }
+    nav {
+        display: none;
+    }
+
+    header.open {
+        nav {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 98;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 6rem;
+            transform: scale(2);
+            opacity: 0;
+            animation: zoomIn 0.7s ease-in-out forwards;
+        }
+        li {
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 2.6rem 0;
+        }
+    }
+    .menu-close {
+        display: block;
+        cursor: pointer;
+        margin-top: 4rem;
+        font-weight: 700;
+    }
+}
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
