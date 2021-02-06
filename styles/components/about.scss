@@ -1,27 +1,23 @@
 .about {
 }
-.chris-img {
-    height: 50rem;
-    margin-left: 4rem;
-    background-size: cover;
-    background-position: right center;
-    filter: grayscale(60%);
-    background-image: url('/imgs/christopher-seabolt.jpg');
+.london {
+    font-size: 8.8rem;
+    display: block;
+    font-weight: 900;
+    color: $COLOR_THEME;
+    line-height: 0.9;
+    margin-left: -0.5rem;
 }
-
-.caption {
-    position: absolute;
-    bottom: 1.5rem;
-    right: 1rem;
-    color: #fff;
-    font-size: 1.4rem;
+.mob {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    margin-top: 2rem;
+}
+.mob-icon {
+    margin-right: 1rem;
+    font-size: 3rem;
 }
 
 @include mobile {
-    .chris-img {
-        display: block;
-        height: 40rem;
-        margin: 4rem 0 0;
-        background-position: right 30%;
-    }
 }

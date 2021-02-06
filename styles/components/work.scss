@@ -1,58 +1,28 @@
-.work {
-    padding: 3rem 0;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    li {
-        vertical-align: top;
-        margin: 1rem;
-        background-color: rgba(22, 33, 44, 0.02);
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        // text-align: center;
-        padding: 4rem;
-        border-radius: 8px;
-        line-height: 1.6;
+.colums-3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #fff;
+    text-align: center;
+    div {
+        width: 30%;
     }
-    img {
-        margin-right: 2rem;
-        float: left;
-        transform: translateX(-0.4rem);
-        height: 7rem;
-        opacity: 0.2;
+    h3 {
+        font-weight: 600;
+        margin: 1rem auto;
     }
-    small {
-        padding-top: 1rem;
-        display: block;
-    }
-    b {
-        font-weight: 700;
-        color: darken($COLOR_THEME, 10);
+    p {
+        max-width: 300px;
     }
 }
-.in {
-    display: inline-flex;
+.icon-circle {
+    font-size: 6rem;
     height: 8rem;
-    margin: 4rem auto 0;
-    border: solid 0.3rem #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-@include mobile {
-    .work {
-        grid-template-columns: 1fr;
-        li {
-            margin: 1rem 0;
-            padding: 4rem 3rem;
-        }
-        img {
-            float: none;
-            display: block;
-            margin: 0 auto 4rem;
-        }
-    }
+.icon-flag {
+    transform: scaleX(1.5);
 }

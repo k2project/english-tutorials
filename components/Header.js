@@ -12,9 +12,10 @@ export default function Header() {
     return (
         <header id='header'>
             <div className='logo'>
-                christopher<span className='color--theme'>seabolt</span>
+                <img src='/imgs/uk-flag.png' alt='' className='flag' />
+                <span>LaTertuliaInglesa</span>
             </div>
-            <div className='menu' onClick={toggleMenu}>
+            {/* <div className='menu' onClick={toggleMenu}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -23,24 +24,19 @@ export default function Header() {
                 <ul>
                     <li onClick={toggleMenu}>
                         <Link href='/#who-I-am'>
-                            <a>Biography</a>
+                            <a>Who I am</a>
                         </Link>
                     </li>
                     <li onClick={toggleMenu}>
                         <Link href='/#what-I-do'>
-                            <a>Methodology</a>
+                            <a>What I do</a>
                         </Link>
                     </li>
                     <li onClick={toggleMenu}>
                         <Link href='/#my-projects'>
-                            <a>Projects</a>
-                        </Link>
-                    </li>
-                    {/* <li onClick={toggleMenu}>
-                        <Link href='/#contact-me'>
                             <a>Blog</a>
                         </Link>
-                    </li> */}
+                    </li>
                     <li onClick={toggleMenu}>
                         <Link href='/#contact-me'>
                             <a>Contact</a>
@@ -50,7 +46,7 @@ export default function Header() {
                         x close
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
         </header>
     );
 }
