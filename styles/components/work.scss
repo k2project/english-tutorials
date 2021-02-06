@@ -26,14 +26,17 @@
 .icon-flag {
     transform: scaleX(1.7);
 }
-.columns-2-uneven {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+
+.Work {
+    background-color: #efefef;
 }
+
 .benefits {
     font-size: 1.6rem;
     color: $COLOR_GREY;
+    padding-left: 4rem;
     margin: auto;
+    max-width: 40rem;
     h4 {
         font-weight: 600;
         margin-bottom: 1rem;
@@ -41,8 +44,7 @@
     li {
         display: flex;
         align-items: center;
-        padding: 0.7rem 1rem;
-        padding-left: 4rem;
+        padding: 0.7rem 0;
     }
 }
 .benefits--icon {

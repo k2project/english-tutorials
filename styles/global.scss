@@ -39,10 +39,6 @@ p {
     line-height: 1.6;
 }
 
-.bg--theme {
-    background-color: $COLOR_THEME;
-}
-
 .color--theme {
     color: $COLOR_THEME;
 }
@@ -75,6 +71,36 @@ footer {
     width: 80%;
     padding: 10rem 4rem;
     margin: auto;
+}
+.bg--theme {
+    background-color: $COLOR_THEME;
+    color: #fff;
+}
+
+.columns-2 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding-left: calc((100% - 100rem) / 2);
+    padding-right: calc((100% - 100rem) / 2);
+}
+.column-2-left {
+    padding: 12rem 0rem;
+    padding-right: 4rem;
+}
+.column-2-right {
+    padding: 12rem 4rem;
+}
+.btn {
+    background: $COLOR_DARK;
+    color: #fff;
+    padding: 1.2rem;
+    min-width: 20rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+.btn--theme {
+    border: solid 2px #fff;
+    color: #fff;
 }
 
 @include tablet {

@@ -34,48 +34,46 @@ const Header = (
 export default function Work() {
     return (
         <Section cls='middle' header={Header}>
-            <div className='wrapper' id='who-I-am'>
-                <div className='columns-2-uneven'>
-                    <div className='about'>
-                        <h2></h2>
-                        <h3 className='section-subtitle'>
-                            Every student matters, every moment counts. Learn to
-                            speak English with confidence!
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat.
-                        </p>
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est
-                            laborum.
-                        </p>
-                    </div>
-                    <div className='benefits'>
-                        <ul>
-                            {benefitsList.map((item, i) => (
-                                <li key={i + 'benefit'}>
-                                    <span
-                                        className={
-                                            item.customIconCls
-                                                ? 'benefits--icon ' +
-                                                  item.customIconCls
-                                                : 'benefits--icon'
-                                        }
-                                    >
-                                        {item.icon}
-                                    </span>
-                                    <span>{item.text}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+            <div cid='who-I-am' className='columns-2'>
+                <div className='about column-2-left'>
+                    <h2></h2>
+                    <p>Habla inglés con confianza!</p>
+                    <h3 className='section-subtitle'>
+                        Every student matters, every moment counts. Learn to
+                        speak English with confidence!
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div className='benefits column-2-right'>
+                    <ul>
+                        {benefitsList.map((item, i) => (
+                            <li key={i + 'benefit'}>
+                                <span
+                                    className={
+                                        item.customIconCls
+                                            ? 'benefits--icon ' +
+                                              item.customIconCls
+                                            : 'benefits--icon'
+                                    }
+                                >
+                                    {item.icon}
+                                </span>
+                                <span>{item.text}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </Section>

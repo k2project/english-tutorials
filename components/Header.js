@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { GiUnionJack } from 'react-icons/gi';
 
 export default function Header() {
     const toggleMenu = () => {
@@ -12,7 +13,8 @@ export default function Header() {
     return (
         <header id='header'>
             <div className='logo'>
-                <img src='/imgs/uk-flag.png' alt='' className='flag' />
+                <GiUnionJack className='flag' />
+                {/* <img src='/imgs/uk-flag.png' alt='' className='flag' /> */}
                 <span>LaTertuliaInglesa</span>
             </div>
             {/* <div className='menu' onClick={toggleMenu}>

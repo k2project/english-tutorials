@@ -66,7 +66,7 @@ export default function Home() {
             <main>
                 <About />
                 <Work />
-                {/* <Contact /> */}
+                <Contact />
             </main>
             <Footer />
         </Fragment>
