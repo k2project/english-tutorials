@@ -1,12 +1,12 @@
 .Contact {
     font-size: 1.2rem;
     line-height: 1.4;
-    background-image: linear-gradient(
-        to left,
-        $COLOR_THEME 25%,
-        #f5f3f3 0%,
-        rgba(#f5f3f3, 0)
-    );
+    // background-image: linear-gradient(
+    //     to left,
+    //     $COLOR_THEME 25%,
+    //     #f5f3f3 0%,
+    //     rgba(#f5f3f3, 0)
+    // );
     h3 {
         font-size: 2.4rem;
         font-weight: 600;
@@ -19,6 +19,8 @@
     }
     .column-2-right {
         padding-left: 6rem;
+        width: calc(100% + (100vw - 100rem) / 2);
+        padding-right: calc((100vw - 100rem) / 2);
     }
 }
 .Contact--bg {
