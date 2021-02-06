@@ -42,15 +42,11 @@ p {
 .bg--theme {
     background-color: $COLOR_THEME;
 }
-.bg--secondary {
-    background-color: $COLOR_SECONDARY;
-}
+
 .color--theme {
     color: $COLOR_THEME;
 }
-.color--theme-secondary {
-    color: $COLOR_SECONDARY;
-}
+
 .color--white {
     color: #fff;
 }
@@ -67,9 +63,8 @@ p {
 }
 
 footer {
-    background-color: $COLOR_SECONDARY_DARK;
-    background-color: $COLOR_SECONDARY;
-    color: $COLOR_SECONDARY_DARK;
+    background-color: $COLOR_DARK;
+    color: $COLOR_GREY;
     padding: 3rem 4rem;
     text-align: center;
     font-size: 1.2rem;
@@ -81,15 +76,6 @@ footer {
     padding: 10rem 4rem;
     margin: auto;
 }
-.two-columns {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-}
-.column-left {
-    padding-right: 5rem;
-}
 
 @include tablet {
     .wrapper {
@@ -100,11 +86,5 @@ footer {
     .wrapper {
         padding-right: 3rem;
         padding-left: 3rem;
-    }
-    .two-columns {
-        display: block;
-    }
-    .column-left {
-        padding-right: 0;
     }
 }

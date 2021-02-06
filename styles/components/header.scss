@@ -3,8 +3,7 @@
     font-weight: 600;
     display: flex;
     align-items: center;
-    width: 100rem;
-    margin: auto;
+
     span {
         font-weight: 600;
     }
@@ -15,25 +14,30 @@
 }
 header {
     position: absolute;
-    width: 100%;
+    left: calc((100% - 100rem) / 2);
     z-index: 2;
     padding: 3rem 0rem;
     display: flex;
-    // align-items: center;
-    justify-content: center;
-    // margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 100rem;
+    margin: auto;
 
     nav {
         flex-grow: 1;
         text-align: right;
-        padding: 0.7rem 0 0.2rem;
     }
     li {
         display: inline-block;
         padding: 0 1.2rem;
+        border-right: solid 2px $COLOR_DARK;
+    }
+    li:last-child {
+        border: none;
     }
     a {
         font-size: 1.6rem;
+        font-weight: 600;
     }
     b {
         font-size: 1.8rem;

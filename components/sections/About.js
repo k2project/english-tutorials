@@ -11,7 +11,7 @@ const Header = (
         </div>
         <p className='paralex-subtitle'>
             English conversation classes for adults. <br /> Improve your
-            practical skills with native speaker from London. Enquire today!
+            practical skills with a native speaker from London. Enquire today!
         </p>
         <p className='paralex-subtitle color--theme mob'>
             <span className='mob-icon'>

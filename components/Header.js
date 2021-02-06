@@ -19,10 +19,10 @@ export default function Header() {
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </div> */}
             <nav>
                 <ul>
-                    <li onClick={toggleMenu}>
+                    {/* <li onClick={toggleMenu}>
                         <Link href='/#who-I-am'>
                             <a>Who I am</a>
                         </Link>
@@ -31,7 +31,7 @@ export default function Header() {
                         <Link href='/#what-I-do'>
                             <a>What I do</a>
                         </Link>
-                    </li>
+                    </li> */}
                     <li onClick={toggleMenu}>
                         <Link href='/#my-projects'>
                             <a>Blog</a>
@@ -42,11 +42,11 @@ export default function Header() {
                             <a>Contact</a>
                         </Link>
                     </li>
-                    <li onClick={closeMenu} className='menu-close'>
+                    {/* <li onClick={closeMenu} className='menu-close'>
                         x close
-                    </li>
+                    </li> */}
                 </ul>
-            </nav> */}
+            </nav>
         </header>
     );
 }
