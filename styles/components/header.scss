@@ -25,6 +25,9 @@ header {
     margin: auto;
 
     nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         flex-grow: 1;
         text-align: right;
     }
@@ -50,6 +53,21 @@ header {
 .menu-close {
     display: none;
 }
+
+.btn-language {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 0.3rem;
+    background-color: $COLOR_DARK;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-language.active {
+    background-color: $COLOR_THEME;
+    cursor: auto;
+}
+
 @include tablet {
     header {
         padding: 4rem 3rem 3rem;

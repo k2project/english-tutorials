@@ -1,26 +1,29 @@
 import React from 'react';
 import Section from '../Section';
-import { FiPhone } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
-const Header = (
+import { translations } from '../../translations';
+
+const Header = ({ lng }) => (
     <div className='paralax-content'>
-        Londres viene a ti
+        {translations[lng].topSection.tagline}
         <div className='paralex-title'>
-            <span className='london'>London</span>
-            comes to you
+            <span className='london'>
+                {translations[lng].topSection.titlePt1}
+            </span>
+            {translations[lng].topSection.titlePt2}
         </div>
         <p className='paralex-subtitle'>
-            English conversation classes for adults. <br /> Improve your
-            practical skills with a native speaker from London. Enquire today!
+            {translations[lng].topSection.subtitle}
         </p>
         <p className='paralex-subtitle color--theme mob'>
             <span className='mob-icon'>
-                <FiPhone />
+                <FaWhatsapp />
             </span>
-            <b>0123 567 123 99</b>
+            <b>{translations.mob}</b>
         </p>
     </div>
 );
-export default function About() {
-    return <Section cls='top' header={Header}></Section>;
+export default function About({ lng }) {
+    return <Section cls='top' header={<Header lng={lng} />}></Section>;
 }

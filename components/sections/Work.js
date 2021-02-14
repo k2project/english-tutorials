@@ -6,41 +6,44 @@ import { BsCheckCircle, BsBookmarkPlus, BsPeople } from 'react-icons/bs';
 import { FiCalendar, FiBook } from 'react-icons/fi';
 import { HiOutlineShieldCheck } from 'react-icons/hi';
 
-const Header = (
-    <div className='paralax-content colums-3'>
-        <div>
-            <span className='icon-circle icon-flag'>
-                <GiUnionJack />
-            </span>
-            <h3>Tutorials</h3>
-            <p>1 to 1 or group conversations with a native speaker</p>
-        </div>
-        <div>
-            <span className='icon-circle'>
-                <BsCheckCircle />
-            </span>
-            <h3>Proof Reading</h3>
-            <p>Final text checking and formatting befor the publication</p>
-        </div>
-        <div>
-            <span className='icon-circle'>
-                <BsBookmarkPlus />
-            </span>
-            <h3>Copy Writing</h3>
-            <p>Supplying the advertising or marketing content</p>
-        </div>
-    </div>
-);
-export default function Work() {
+import { translations } from '../../translations';
+
+const Header = ({ lng }) => {
     return (
-        <Section cls='middle' header={Header}>
+        <div className='paralax-content colums-3'>
+            <div>
+                <span className='icon-circle icon-flag'>
+                    <GiUnionJack />
+                </span>
+                <h3>{translations[lng].offers.tutorials.title}</h3>
+                <p>{translations[lng].offers.tutorials.subtitle}</p>
+            </div>
+            <div>
+                <span className='icon-circle'>
+                    <BsCheckCircle />
+                </span>
+                <h3>{translations[lng].offers.editing.title}</h3>
+                <p>{translations[lng].offers.editing.subtitle}</p>
+            </div>
+            <div>
+                <span className='icon-circle'>
+                    <BsBookmarkPlus />
+                </span>
+                <h3>{translations[lng].offers.business.title}</h3>
+                <p>{translations[lng].offers.business.subtitle}</p>
+            </div>
+        </div>
+    );
+};
+export default function Work({ lng }) {
+    return (
+        <Section cls='middle' header={<Header lng={lng} />}>
             <div cid='who-I-am' className='columns-2'>
                 <div className='about column-2-left'>
                     <h2></h2>
-                    <p>Habla inglés con confianza!</p>
+                    <p>{translations[lng].about.tagline}</p>
                     <h3 className='section-subtitle'>
-                        Every student matters, every moment counts. Learn to
-                        speak English with confidence!
+                        {translations[lng].about.title}
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,

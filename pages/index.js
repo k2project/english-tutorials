@@ -1,6 +1,5 @@
+import { Fragment, useState } from 'react';
 import Head from 'next/head';
-import { Fragment } from 'react';
-// import '../styles/styles.scss';
 import About from '../components/sections/About';
 import Work from '../components/sections/Work';
 import Contact from '../components/sections/Contact';
@@ -8,20 +7,21 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Home() {
+    const [lng, setLng] = useState('es');
     return (
         <Fragment>
             <Head>
                 <title>
-                    Christopher Seabolt | Venture Capital Professional
+                    LaTertuliaInglesa | Clases de inglés con un profesor nativo
+                    de Londres
                 </title>
                 <meta
                     name='description'
-                    content='Christopher holds over 30 years of venture capital and operational experience in early-stage growth companies. Of almost 20 deals across multiple funds in the early-stage sector, consisting entirely of Seed and Start-up, Christopher has engineered successful (+money) exits for well over half of these, with extraordinarily high returns across all managed portfolios.'
+                    content='Clases de inglés conversacional para estudiantes de niveles
+                    intermedio y avanzado. Mejora tus habilidades practicas con un
+                    profesor privado, nativo de Londres.'
                 />
-                <meta
-                    name='keywords'
-                    content='venture capital, early-stage, startup, seed, highest performance, experienced, realized returns'
-                />
+                <meta name='keywords' content='' />
                 <meta name='author' content='@_k2project' />
                 <meta
                     name='viewport'
@@ -35,38 +35,25 @@ export default function Home() {
                 <meta property='og:type' content='website' />
                 <meta
                     property='og:description'
-                    content='Christopher holds over 30 years of venture capital and operational experience in early-stage growth companies. Of almost 20 deals across multiple funds in the early-stage sector, consisting entirely of Seed and Start-up, Christopher has engineered successful (+money) exits for well over half of these, with extraordinarily high returns across all managed portfolios.'
+                    content='Clases de inglés conversacional para estudiantes de niveles
+                    intermedio y avanzado. Mejora tus habilidades practicas con un
+                    profesor privado, nativo de Londres.'
                 />
                 <meta
                     property='og:image'
                     content='https://www.www.armillary.eu/imgs/christopher-seabolt.jpg'
                 />
 
-                <script
-                    async
-                    src='https://www.googletagmanager.com/gtag/js?id=UA-180574978-1'
-                ></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0F90YHNWN0');
-        `,
-                    }}
-                />
-                <link rel='preconnect' href='https://fonts.gstatic.com' />
                 <link
                     href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap'
                     rel='stylesheet'
                 />
             </Head>
-            <Header />
+            <Header lng={lng} setLng={setLng} />
             <main>
-                <About />
-                <Work />
-                <Contact />
+                <About lng={lng} />
+                <Work lng={lng} />
+                <Contact lng={lng} />
             </main>
             <Footer />
         </Fragment>
