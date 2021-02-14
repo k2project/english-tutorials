@@ -1,7 +1,9 @@
 import React from 'react';
 import Section from '../Section';
 
-export default function Contact() {
+import { translations } from '../../translations';
+
+export default function Contact({ lng }) {
     return (
         <>
             <div className='Contact columns-2'>
@@ -48,8 +50,8 @@ export default function Contact() {
                     </h3>
                     <p>
                         I am always happy to speak briefly on the phone. You can
-                        contact me on <b>0123 456 789</b>. If you prefer the
-                        email, please complete the contact form.
+                        contact me on <b>{translations.mob}</b>. If you prefer
+                        the email, please complete the contact form.
                     </p>
                     Please be aware that if I am with clients I will be unable
                     to answer your call. In that case, leave me a message or use
